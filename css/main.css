@@ -113,12 +113,15 @@ header .inner {padding: 20px 3%;}
    font-family: 'Bell Mt';
    margin-top: 10rem;
 
+
 }
 
 .main_wrap .title_top strong {
+   display: block;
    font-size: 4rem;
    line-height: 6rem;
    color: var(--main-color);
+   padding-bottom: 1rem;
 
 }
 
@@ -266,7 +269,7 @@ header .inner {padding: 20px 3%;}
    font-family: 'Bell Mt';
 }
 #skill .skill_left {
-   width: calc(100%/2); height: 100vh;
+   width: calc(100% / 2); height: 100vh;
    display: flex; justify-content: center;
    align-items: center;
    color: var(--main-color);
@@ -274,9 +277,8 @@ header .inner {padding: 20px 3%;}
 }
 
 #skill .scroll_box {
-   width: calc(100%/2);
-   margin-left: 5rem;
-   margin-bottom: 5rem;
+   width: calc(100% / 2);
+   margin-bottom: 200px;
 }
 
 #skill .scroll_box ul {
@@ -307,14 +309,21 @@ header .inner {padding: 20px 3%;}
 #projectStart{margin: auto;}
 
  #projectStart .circle_box{
-   width: 100%;
+   /* width: 100%; */
    display: flex; justify-content: center; align-items: center;
    background: var(--deepyellow-color);
    position: relative; top: 50%;
    transform: translateY(-50%);
    overflow: hidden;
 }
-.circle{animation: circle 10s linear infinite;}
+.circle{
+   animation: circle 10s linear infinite;
+}
+
+@keyframes circle {
+   from {transform: rotateZ(0deg);}
+   to{transform: rotateZ(360deg);}
+}
 
 /*
 #projectStart .circle_wrap{
@@ -348,11 +357,7 @@ textPath{font-size: 50px;}
 } */
 
 
-@keyframes circle {
-   from {transform: rotateZ(0deg);}
 
-   to{transform: rotateZ(360deg);}
-}
 
 
 /* design_pro */
@@ -567,7 +572,8 @@ footer{
 
 footer .inner{
    height: 100%; padding: 40px 10%;
-   display: flex; flex-direction:column; gap: 20rem;
+   display: flex; flex-direction:column; gap: 10rem;
+   align-items: flex-start;
    justify-content: center;
 }
 
@@ -582,16 +588,19 @@ footer .inner{
 }
 
 .contact_btnWrap {
-   display: flex; gap: 20rem;
-   align-items: center; justify-content: center;
+   display: flex; gap: 4rem;
+   align-items: center;
 }
 
-.contact_btn{
+.contact_btn a{
+   display: flex; align-items: center;
+   justify-content: center;
 color: var(--main-color);
-font-size: 3rem;
+font-size: 2rem;
 border: 1px solid var(--main-color);
-width: 35rem; height: 8rem;
+width: 18rem;
 border-radius: 5rem;
+padding: 1rem;
 }
 
 footer .copyright {
@@ -606,7 +615,7 @@ footer .copyright {
    .contact_btnWrap { gap: 18rem;}
    .contact_btn{
       font-size: 3rem;
-      width: 25rem; height: 10rem;
+      width: 15rem; height: 5rem;
       border-radius: 5rem;
    }
 }

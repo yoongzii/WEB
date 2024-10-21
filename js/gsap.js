@@ -8,6 +8,7 @@ let scrollBox = document.querySelector('.scroll_box')
 let height = scrollBox.offsetHeight;
 
 
+
 gsap.to('.skill_left', {
 scrollTrigger: {
    trigger: '.skill_left',
@@ -16,19 +17,22 @@ scrollTrigger: {
    pin: true,
    scrub: true,
    markers: false,
+
 }
 })
 
+let circleBox = document.querySelector('#projectStart')
+let circleHeight = circleBox.offsetHeight;
 
 gsap.to('#projectStart .circle_box', {
-   width: 1920,
    height: '100vh',
    scrollTrigger: {
       trigger: '#projectStart',
-      start: 'top top',
+      start: `top top`,
       end:'bottom top',
       scrub: 1,
       pin: true,
+      markers: false
       }
  })
 
@@ -46,6 +50,7 @@ scrollTrigger: {
    pin: true,
    scrub: true,
    markers: false,
+
 }
 })
 
