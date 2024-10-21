@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>sealy</title>
+
+   <!-- CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
+   <link rel="stylesheet" href="./css/reset.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+   <!-- <link rel="stylesheet" href="./css/main.css"> -->
+   <link rel="stylesheet" href="./css/main_gnb.css">
+
+   <!-- js -->
+   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+   <!-- <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js" integrity="sha256-sw0iNNXmOJbQhYFuC9OF2kOlD5KQKe1y5lfBn4C9Sjg=" crossorigin="anonymous"></script> -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+   <script defer src="js/main.js"></script>
+
+</head>
+<body>
+   <div class="skip_nav">
+      <a href="#main_content">본문 바로가기</a>
+   </div>
+
+<header>
+   <div class="header_inner">
+      <div class="header_left">
+         <h1>
+            <a href="index.html">
+            <span class="screen_out">Sealy</span>
+            </a>
+         </h1>
+
+         <nav id="gnb">
+            <ul class="dep1">
+               <li>
+                  <span>About Sealy</span>
+                  <div class="dep2_wrap">
+                     <ul class="dep2">
+                        <li><a href="#">Sealy Company</a></li>
+                        <li><a href="#">Why Sealy</a></li>
+                        <li><a href="#">Sealy Korea</a></li>
+                     </ul>
+                  </div>
+               </li>
+
+               <li>
+                  <span>Collection</span>
+                  <div class="dep2_wrap">
+                     <ul class="dep2">
+                        <li>포스처피딕
+                           <ul class="dep3">
+                              <li><a href="#">헤인즈</a></li>
+                              <li><a href="#">크라운쥬얼</a></li>
+                              <li><a href="#">엑스퀴짓</a></li>
+                              <li><a href="#">퍼포먼스</a></li>
+                           </ul>
+                        </li>
+
+                        <li>포스처프리미어
+                           <ul class="dep3">
+                              <li><a href="#">시그니처</a></li>
+                              <li><a href="#">프리미어 DLX</a></li>
+                              <li><a href="#">프리미어</a></li>
+                              <li><a href="#">하단매트리스</a></li>
+                              <li><a href="#">프레임</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+
+               <li>
+                  <span>
+                  <a href="#">Shop</a>
+                  </span>
+                  <div class="dep2_wrap">
+                     <ul class="dep2">
+                        <li>매트리스
+                           <ul class="dep3">
+                              <li><a href="#">슈퍼싱글</a></li>
+                              <li><a href="#">퀸</a></li>
+                              <li><a href="#">킹</a></li>
+                              <li><a href="#">칼킹</a></li>
+                              <li><a href="#">레귤러킹</a></li>
+                              <li><a href="#">투매트리스</a></li>
+                           </ul>
+                        </li>
+
+                        <li>침대
+                           <ul class="dep3">
+                              <li><a href="#">프레임</a></li>
+                              <li><a href="#">퀸</a></li>
+                              <li><a href="#">침대세트</a></li>
+                              <li><a href="#">하단매트리스</a></li>
+                              <li><a href="#">헤드보드</a></li>
+                           </ul>
+                        </li>
+
+                        <li>악세사리류
+                           <ul class="dep3">
+                              <li><a href="#">협탁</a></li>
+                              <li><a href="#">베개</a></li>
+                              <li><a href="#">방수커버</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </li>
+
+               <li>
+                  <span>Community</span>
+                  <div class="dep2_wrap">
+                     <ul class="dep2">
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Event</a></li>
+                        <li><a href="#">Review</a></li>
+                        <li><a href="#">Hotel</a></li>
+                     </ul>
+                  </div>
+               </li>
+
+               <li>
+                  <span>Customer Sevice</span>
+                  <div class="dep2_wrap">
+                     <ul class="dep2">
+                        <li><a href="#">A/S안내</a></li>
+                        <li><a href="#">정품안내</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">1:1문의</a></li>
+                     </ul>
+                  </div>
+               </li>
+            </ul>
+         </nav>
+      </div>
+
+      <div class="util">
+         <ul>
+            <li><a href="#"><img src="img/main/btn_store.svg" alt="매장찾기"></a></li>
+            <li><a href="#"><img src="img/main/btn_cart.svg" alt="장바구니"></a></li>
+            <li><a href="#"><img src="img/main/btn_mypage.svg" alt="로그인"></a></li>
+            <li>
+               <button class="btn_search_open"><img src="img/main/btn_search.svg" alt="검색"></button>
+            </li>
+         </ul>
+      </div>
+
+<!-- ********* quick_search 수정 필요 -->
+      <div class="quick_search">
+         <div class="searchInner">
+               <div class="search">
+                  <div class="search_txt">
+                     <form action="">
+                        <input type="text">
+                        <button>
+                           <img src="img/main/btn_search.svg" alt="검색" style="fill: rgba(122, 174, 211, 0);">
+                        </button>
+                     </form>
+                  </div>
+
+               <dl>
+                  <dt> 인기 검색어
+                     <dd><a href="#">엑스퀴짓</a></dd>
+                     <dd><a href="#">에일레</a></dd>
+                     <dd><a href="#">브라이드ET</a></dd>
+                     <dd><a href="#">에드가</a></dd>
+                  </dt>
+               </dl>
+
+               <div class="quickCont">
+                  <strong>이런 제품은 어떠세요?</strong>
+
+                  <div class="quickText">
+                     <ul>
+                        <li>
+                           <div>
+                              <a href="#"><img src="img/main/41f8061196c38055b2e8d08e3059d8f8.jpg" alt="Edgar II Plush(에드가 2 플러쉬) SS"></a>
+                              <strong>Edgar II Plush(에드가 2 플러쉬) SS</strong>
+                              <p>사이즈: SS/Q/KI/CK/RK</p>
+                              <p>쿠션감:Plush(소프트)</p>
+                              <p>1,605,000원</p>
+                              <!-- <div class="quickHeart">
+                                 <img src="img/main/icon_202310051737003500.png" alt="">
+                              </div> -->
+                           </div>
+
+
+                        </li>
+
+                        <li>
+                           <div>
+                              <a href="#"><img src="img/main/221bb031eb6ba75b04ed85aae2f03093.jpg" alt="Marry Me2(메리미 2) SS"></a>
+                              <strong>Marry Me2(메리미 2) SS</strong>
+                              <p>사이즈: SS/Q/KI/CK/RK</p>
+                              <p>쿠션감:Cushion Firm(미디엄 하드)</p>
+                              <p>894,000원</p>
+                              <!-- <img src="img/main/icon_202310051737003500.png" alt=""> -->
+                           </div>
+                        </li>
+
+                        <li>
+                           <div>
+                              <a href="#"><img src="img/main/50dc5312b8340f8e55277d3ebe1db4f7.jpg" alt="Souffle(슈플레)"></a>
+                              <strong>Souffle(슈플레)</strong>
+                              <p>사이즈: SS/Q/KI/CK/RK</p>
+                              <p>컬러:다크그레이, 라이트그레이,베이지</p>
+                              <p>894,000원</p>
+                           </div>
+                        </li>
+
+                        <li>
+                           <div>
+                              <a href="#"><img src="img/main/221bb031eb6ba75b04ed85aae2f03093.jpg" alt="Marry Me2(메리미 2) Q"></a>
+                              <strong>Marry Me2(메리미 2) Q</strong>
+                              <p>사이즈: SS/Q/KI/CK</p>
+                              <p>쿠션감:Cushion Firm(미디엄 하드)</p>
+                              <p>1,194,000원</p>
+                           </div>
+                        </li>
+
+                        <li>
+                           <div>
+                              <a href="#"><img src="img/main/221bb031eb6ba75b04ed85aae2f03093.jpg" alt="Marry Me2(메리미 2) KI"></a>
+                              <strong>Marry Me2(메리미 2) KI</strong>
+                              <p>사이즈: SS/Q/KI/CK</p>
+                              <p>쿠션감:Cushion Firm(미디엄 하드)</p>
+                              <p>1,314,000원</p>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+   <main id="main_content">
+      <div class="main_visual">
+         <div thumbsSlider="" class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide">
+                  <a href="#"><img src="img/main/75de0631c0e27e8e501f3bf7e2661adb.jpg" alt=""/></a>
+               </div>
+               <div class="swiper-slide">
+                  <a href="#"><img src="img/main/ec079d7d35d9e167b279e2ae38002f9d.png" alt=""/></a>
+               </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+               <!-- navigation buttons -->
+               <div class="swiper-button-left"><img src="img/common/btn_slider_arrow.webp" alt=""></div>
+               <div class="swiper-button-right"><img src="img/common/btn_slider_arrow.webp" alt=""></div>
+         </div>
+
+         <div class="swiper-container mySwiper2">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide">
+                  <a href="#"><img src="img/main/75de0631c0e27e8e501f3bf7e2661adb.jpg" alt=""/></a>
+               </div>
+               <div class="swiper-slide">
+                  <a href="#"><img src="img/main/ec079d7d35d9e167b279e2ae38002f9d.png" alt=""/></a>
+               </div>
+            </div>
+
+            <div class="swiper-auto-controls">
+               <div class="auto-left button_wrap">
+                  <img src="img/common/btn_slider_arrow.webp" alt="">
+               </div>
+               <div class="swiper-pagination2"></div>
+               <div class="auto-right button_wrap">
+                  <img src="img/common/btn_slider_arrow.webp" alt="">
+               </div>
+            </div>
+
+         </div>
+      </div>
+
+   </main>
+</body>
+</html>
