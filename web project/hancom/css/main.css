@@ -398,6 +398,7 @@ main .pd_list_wrap .swiper-wrapper{
    display: flex;
     /* gap: 20px; */
 }
+main .pd_list_wrap ul{display: flex;}
 main .pd_list_wrap li a{
    display: block;
    width: 370px;height: 380px;

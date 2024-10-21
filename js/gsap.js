@@ -50,40 +50,27 @@ scrollTrigger: {
 })
 
 
- const h2 = document.querySelector('.main_wrap h2')
+ const mainVisual = document.querySelector('#main_visual')
+ let mainHeight= mainVisual.offsetHeight;
  const main = gsap.timeline()
 
- main.to('.main_wrap h2', {
+ main.to('.title_under h2', {
       x: -600,
-      y: 200,
+      y: 150,
       fontSize: '8rem',
-      // opacity : 0.6
-      zIndex: 1
-      }, 'text')
-
-      .to('.main_wrap .main_video',{
-         width: 1920,
-         height: '100vh',
-         borderRadius: 0,
-         y: -400,
-         zIndex:-1
-      }, 'text')
-
-   .to('.main_wrap .title_top',{
-         // color: '#E9EAEC',
-         // borderColor:'#E9EAEC',
-         // borderBottom : '0px',
-         // opacity : 0.6,
-         // y: -10
+      zIndex: 1,
       }, 'text')
 
    ScrollTrigger.create({
       animation: main,
-      trigger: '.main_wrap',
+      trigger: '.title_under ',
       start: `top top `,
-      end: `100% top`,
+      // end: `+=${mainHeight / 2 -300
+
+      // } top`,
+      end: `30% top`,
       pin: true,
       scrub: true,
-      markers: true,
+      markers: false,
    })
 })//ready()
