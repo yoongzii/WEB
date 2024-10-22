@@ -7,8 +7,6 @@ gsap.registerPlugin(ScrollTrigger);
 let scrollBox = document.querySelector('.scroll_box')
 let height = scrollBox.offsetHeight;
 
-
-
 gsap.to('.skill_left', {
 scrollTrigger: {
    trigger: '.skill_left',
@@ -30,7 +28,7 @@ gsap.to('#projectStart .circle_box', {
       end:'bottom top',
       scrub: 1,
       pin: true,
-      // markers: true,
+
       }
  })
 
@@ -48,7 +46,6 @@ scrollTrigger: {
    pin: true,
    scrub: true,
    markers: false,
-
 }
 })
 
@@ -58,19 +55,19 @@ scrollTrigger: {
  const main = gsap.timeline()
 
  main.to('.title_under h2', {
-      x: -600,
-      y: 150,
+      x: -100,
+      y: 500,
       fontSize: '8rem',
       zIndex: 1,
       }, 'text')
+     .to('.scroll', {
+     opacity:0
+         }, 'text')
 
    ScrollTrigger.create({
       animation: main,
-      trigger: '.title_under ',
+      trigger: '.title_under',
       start: `top top `,
-      // end: `+=${mainHeight / 2 -300
-
-      // } top`,
       end: `30% top`,
       pin: true,
       scrub: true,

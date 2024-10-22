@@ -17,11 +17,11 @@ body{
    background-color: var(--black-color);
    overflow-x: hidden;
    cursor: none;
-
 }
 
+
 .cursor{
-   width: 10px;height: 10px;
+   width: 12px;height: 12px;
    background: var(--deepyellow-color);
    position: fixed;left: 10px; top: 10px;
    z-index: 9999;
@@ -32,12 +32,16 @@ body{
 a{
    color: var(--black-color);
    text-decoration: none;
+   cursor: none;
 }
 
 button{
    background: none;
    border: none;
+   cursor: none;
 }
+
+
 
 h2 {font-size: 5rem; font-family: 'Bell Mt';}
 section {height: 100vh;}
@@ -56,11 +60,6 @@ header{
    position:fixed; left: 0; right: 0;top: 0; z-index: 100;
 
 }
-/* header.scroll{
-   border-bottom: 1px solid var(--blackgray-color);
-   background: hsla(0, 0%, 70%, 0.5) !important;
-   -webkit-backdrop-filter: blur(50px);
-} */
 
 header .inner {padding: 20px 3%;}
 
@@ -75,7 +74,7 @@ header .inner {padding: 20px 3%;}
 .nav a{
    color: var(--main-color);
    font-family: 'Bell Mt';
-   /* color: var(--blackgray-color); */
+
 }
 .util {
    display: flex; justify-content: end; align-items: center;
@@ -84,7 +83,6 @@ header .inner {padding: 20px 3%;}
 .util button{
    font-size:25px;
    color: var(--main-color);
-   /* color: var(--blackgray-color); */
 }
 
 
@@ -106,15 +104,14 @@ header .inner {padding: 20px 3%;}
 
 .main_wrap{
    height: 100%;
-   /* border: 1px solid red; */
    display: flex; flex-direction: column;
    align-items: center;
-   justify-content: space-between;
+   position: relative;
+
 }
 
 .main_wrap .title_top{
    width: 100%; overflow: hidden;
-   /* border-bottom: 1px solid var(--blackgray-color); */
    border-bottom: 1px solid var(--main-color);
    text-align: center;
    font-family: 'Bell Mt';
@@ -132,69 +129,53 @@ header .inner {padding: 20px 3%;}
 
 }
 
-
-
-.main_wrap .title_under{
-   display: flex; flex-direction: column; gap: 18rem;
-   align-items: center;
-   justify-content: center;
-   height: 100%;
-   padding: 2rem 0;
-   /* border: 1px solid red; */
-}
-
 .title_under h2{
    color: var(--deepyellow-color);
    font-size: 18rem; white-space: nowrap;
    line-height: 25rem;
-   /* font-family: 'sans-serif'; */
 
 }
 
-/* .main_wrap .title_under .scroll{
-   font-size: 1.8rem;
-} */
-.main_wrap .title_under .scroll {
-   width: 30px;
-   height: 50px;
-   border: 3px solid lightgray;
-   border-radius: 60px;
-   position: relative;
-   &::before {
-      content: '';
-      width: 10px;
-      height: 10px;
-      position: absolute;
-      top: 8px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: lightgray;
-      border-radius: 50%;
-      opacity: 1;
-      animation: wheel 2s infinite;
-      -webkit-animation: wheel 2s infinite;
-   }
- }
 
+.main_wrap .scroll{
+   display: flex; flex-direction: column; align-items: center; gap: 1rem;
+   width: 1px;
+   height: 150px;
+   position: absolute; left: 50%; bottom: 0;
+   transform: translateX(-50%);
+
+
+}
+.main_wrap .scroll span{
+   display: block;
+   transform:rotate(90deg);
+   font-size: 1.8rem;
+   font-family: 'Bell Mt';
+   color: var(--main-color);
+
+ }
+ .main_wrap .scroll .scroll_bar{
+   position: relative; height: 100%;
+   width: 1px; margin: 30px auto 0;
+   background: var(--main-color);
+   opacity: 1;
+
+ }
+ .main_wrap .scroll .scroll_bar .animation{
+   width: 100%;
+   background: var(--main-color);
+   animation: wheel 2s infinite ease-in-out;
+ }
  @keyframes wheel {
    to {
-     opacity: 0;
-     top: 60px;
+    height: 100%;
    }
+    from{
+      height: 0%;
+    }
  }
 
 
-/* .main_wrap .main_video{
-   width: 100%;
-   height: 80vh;
-   overflow: hidden;
-   border-radius: 40rem 40rem 0 0;
-}
-
-.main_wrap .main_video img{
-   width: 100%; height: 100%;
-   object-fit: cover;
-} */
 
 /* about */
 #about{color: var(--main-color);}
@@ -229,7 +210,7 @@ header .inner {padding: 20px 3%;}
    display: flex; flex-direction: column; gap: 10rem;
    justify-content: space-between; align-items: flex-start;
    width: calc(100%/2 - 10rem);
-    padding: 0 10rem;
+   padding: 0 10rem;
    border-left: 1px solid var(--main-color);
    font-family: 'Bell Mt';
 
@@ -315,7 +296,7 @@ header .inner {padding: 20px 3%;}
 /* projectStart */
 #projectStart{margin: auto;}
 
- #projectStart .circle_box{
+#projectStart .circle_box{
    /* width: 100%; */
    display: flex; justify-content: center; align-items: center;
    background: var(--deepyellow-color);
@@ -331,41 +312,6 @@ header .inner {padding: 20px 3%;}
    from {transform: rotateZ(0deg);}
    to{transform: rotateZ(360deg);}
 }
-
-/*
-#projectStart .circle_wrap{
-   display: flex; justify-content: center; align-items: center;
-   background: var(--deepyellow-color);
-   position: relative; top: 50%;
-   transform: translateY(-50%);
-}
-#projectStart .circle {
-   width: 500; min-height: 500px;
-   overflow: hidden;
-
-}
-
-#curve {fill: transparent; width: 100%; height: 100%;}
-.text {
-   fill: var(--main-color);
-   transform-origin: 50% 50%;
-   animation: project 15s linear infinite;
-   font-size: 500px;
-
-
-}
-
-textPath{font-size: 50px;}
-
-@keyframes project {
-   from {transform: rotateZ(0deg);}
-
-   to{transform: rotateZ(360deg);}
-} */
-
-
-
-
 
 /* design_pro */
 #design_pro{
