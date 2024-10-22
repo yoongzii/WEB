@@ -21,8 +21,6 @@ scrollTrigger: {
 }
 })
 
-let circleBox = document.querySelector('#projectStart')
-let circleHeight = circleBox.offsetHeight;
 
 gsap.to('#projectStart .circle_box', {
    height: '100vh',
@@ -32,7 +30,7 @@ gsap.to('#projectStart .circle_box', {
       end:'bottom top',
       scrub: 1,
       pin: true,
-      markers: false
+      // markers: true,
       }
  })
 

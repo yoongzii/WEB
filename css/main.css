@@ -5,6 +5,7 @@
       --main-color:#E9EAEC;
       --blackgray-color:#2A2E34;
       --black-color:#0B0C0C;
+
    }
 
 * {
@@ -15,10 +16,16 @@
 body{
    background-color: var(--black-color);
    overflow-x: hidden;
-   cursor: pointer;
+   cursor: none;
 
 }
 
+.cursor{
+   width: 30px;height: 30px;
+   background: var(--deepyellow-color);
+   position: fixed;left: 10px; top: 10px;
+   z-index: 9999;
+}
 
 
 a{

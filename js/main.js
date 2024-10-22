@@ -32,7 +32,11 @@ $('.modal').on('click', function(){
 })
 
 
-
+$(window).on('mousemove',function(e){
+   const x = e.clientX
+   const y = e.clientY
+   $('.cursor').css({left: x , top: y})
+})
 
 
 }) //ready()
@@ -45,25 +49,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
    images.forEach(image => {
        image.addEventListener('click', function() {
-           modalImg.src = this.src; 
+           modalImg.src = this.src;
            modal.style.display = 'block';
            setTimeout(() => {
-               modal.style.bottom = '0'; 
+               modal.style.bottom = '0';
            }, 10);
        });
    });
 
    closeBtn.addEventListener('click', function() {
-       modal.style.bottom = '-100%'; 
+       modal.style.bottom = '-100%';
        setTimeout(() => {
-           modal.style.display = 'none'; 
-       }, 500); 
+           modal.style.display = 'none';
+       }, 500);
    });
 
-   
+
    modal.addEventListener('click', function(event) {
        if (event.target === modal) {
            closeBtn.click();
        }
    });
+
+
+
+
 });
