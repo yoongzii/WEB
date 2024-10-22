@@ -182,6 +182,7 @@ header .inner {padding: 20px 3%;}
    height: 100%;
    display: flex; align-items: center;
    justify-content: space-between;
+   font-family: 'Kopubworld','Pretendard','SUIT','NotoSansKR', sans-serif;
 }
 
 #about .pofile {
@@ -197,33 +198,27 @@ header .inner {padding: 20px 3%;}
 }
 .pofile .photo img{width: 100%; height: 100%; object-fit: cover;}
 
-.pofile .photo_txt {text-align: center;font-family: 'Bell Mt';}
+.pofile .photo_txt {text-align: center;}
 .pofile .photo_txt h3 {font-size: 6rem;  margin-bottom: 3rem; }
 .pofile .photo_txt p {
-   font-size: 1.6rem; line-height: 2.5rem;
-   font-family: 'Kopubworld','Pretendard','SUIT','NotoSansKR', sans-serif;}
+   font-size: 1.6rem; line-height: 2.5rem; text-align: center;
+}
 
 
 .pofile_right{
-   display: flex; flex-direction: column; gap: 10rem;
+   display: flex; flex-direction: column; gap: 5rem;
    justify-content: space-between; align-items: flex-start;
-
    width: calc(100%/2 - 10rem);
    padding: 0 10rem;
    border-left: 1px solid var(--main-color);
-   font-family: 'Bell Mt';
 
 }
 
 .pofile_right strong {
-   display: block;
-   font-size: 3.2rem;
-   padding: 2.5rem 0;
+   display: block; font-weight: bold;
+   font-size: 3.2rem; padding: 2.8rem 0;
 }
-.pofile_right .info_txt {
-   font-family: 'Kopubworld','Pretendard','SUIT','NotoSansKR', sans-serif;
-   font-weight: 400;
-}
+
 .pofile_right .info_txt p{font-size: 2.2rem; line-height: 3rem;}
 
 .pofile_right .info_txt span {
@@ -238,7 +233,7 @@ header .inner {padding: 20px 3%;}
    width: 100%;
 }
 
-.pofile_right .list_dayBox {display: flex; gap: 0.5rem;}
+.pofile_right .list_dayBox {display: flex; gap: 1rem; align-items: center;}
 .pofile_right .list_dayBox .list_day{font-size: 2rem; padding: 0.5rem 0;}
 
 .pofile_right .progrma_wrap {display: flex;flex-direction: column; gap: 2rem;}

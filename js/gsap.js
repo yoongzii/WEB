@@ -66,7 +66,7 @@ scrollTrigger: {
       animation: main,
       trigger: '.main_wrap h2',
       start: `top top `,
-      end: `30% top`,
+      end: `60% top`,
       pin: true,
       scrub: true,
       markers: false,
