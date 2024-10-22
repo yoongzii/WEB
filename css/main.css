@@ -191,11 +191,11 @@ header .inner {padding: 20px 3%;}
    width: calc(100%/2); padding: 2.5rem;
 }
 .pofile .photo{
-   width: 40rem; height: 50rem; border-radius: 50rem;
+   width: 35rem; height: 45rem; border-radius: 50rem;
    border: 1.5px solid var(--deepyellow-color);
    overflow: hidden;
 }
-.pofile .photo img{width: 100%; height: 100%; object-fit: contain;}
+.pofile .photo img{width: 100%; height: 100%; object-fit: cover;}
 
 .pofile .photo_txt {text-align: center;font-family: 'Bell Mt';}
 .pofile .photo_txt h3 {font-size: 6rem;  margin-bottom: 3rem; }
@@ -207,6 +207,7 @@ header .inner {padding: 20px 3%;}
 .pofile_right{
    display: flex; flex-direction: column; gap: 10rem;
    justify-content: space-between; align-items: flex-start;
+
    width: calc(100%/2 - 10rem);
    padding: 0 10rem;
    border-left: 1px solid var(--main-color);
@@ -216,27 +217,30 @@ header .inner {padding: 20px 3%;}
 
 .pofile_right strong {
    display: block;
-   font-size: 3rem;
-   margin-bottom: 2rem;
+   font-size: 3.2rem;
+   padding: 2.5rem 0;
 }
 .pofile_right .info_txt {
    font-family: 'Kopubworld','Pretendard','SUIT','NotoSansKR', sans-serif;
-   font-weight: 300;
+   font-weight: 400;
 }
 .pofile_right .info_txt p{font-size: 2.2rem; line-height: 3rem;}
 
 .pofile_right .info_txt span {
    display: block;
-   font-size: 1.6rem; line-height: 2rem;
+   font-size: 1.8rem; line-height: 2rem;
    margin-bottom: 1rem;
 }
 
 .pofile_right .pofile_list {
-   display: flex; align-items: center;
+   display: flex; align-items: flex-start;
    justify-content: space-between;
    width: 100%;
-
 }
+
+.pofile_right .list_dayBox {display: flex; gap: 0.5rem;}
+.pofile_right .list_dayBox .list_day{font-size: 2rem; padding: 0.5rem 0;}
+
 .pofile_right .progrma_wrap {display: flex;flex-direction: column; gap: 2rem;}
 .pofile_right .progrma_wrap img {width: 5rem; height: 5rem; padding-right: 4rem;}
 
@@ -265,6 +269,7 @@ header .inner {padding: 20px 3%;}
 #skill .scroll_box {
    width: calc(100% / 2);
    margin-bottom: 200px;
+
 }
 
 #skill .scroll_box ul {
@@ -278,14 +283,14 @@ header .inner {padding: 20px 3%;}
 
 
 #skill .scroll_box li strong{
+
    display: block;
-   font-size: 5rem; line-height: 5rem;
-   margin-bottom: 2rem;
+   font-size: 5rem; padding: 4rem 0;
    color: var(--deepyellow-color);
 }
 
 #skill .scroll_box li p{
-   font-size: 1.8rem; line-height: 2rem;
+   font-size: 1.8rem; line-height: 3.8rem;
    font-family: 'Kopubworld','Pretendard','SUIT','NotoSansKR', sans-serif;
    color: var(--main-color);
    opacity: 0.8;
