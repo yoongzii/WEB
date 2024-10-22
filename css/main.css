@@ -21,10 +21,11 @@ body{
 }
 
 .cursor{
-   width: 30px;height: 30px;
+   width: 10px;height: 10px;
    background: var(--deepyellow-color);
    position: fixed;left: 10px; top: 10px;
    z-index: 9999;
+   border-radius: 50%;
 }
 
 
@@ -34,7 +35,6 @@ a{
 }
 
 button{
-   cursor: pointer;
    background: none;
    border: none;
 }
@@ -386,13 +386,17 @@ textPath{font-size: 50px;}
    width: 40%;
    height: 100vh;
    display: flex;
-   flex-direction: column; gap: 5rem;
+   flex-direction: column; gap: 6rem;
    justify-content: center;align-items: center;
   font-size: 7rem; color: #FFF;
   color: var(--deepyellow-color);
   background: var(--black-color);
+
 }
-#design_pro .pin_content p {font-size: 2rem}
+#design_pro .pin_content p {
+   font-size: 1.8rem;
+   font-family: 'Kopubworld','Pretendard','SUIT','NotoSansKR', sans-serif;
+}
 #design_pro .scroll_box ul {
    height: 100%;white-space: nowrap;
    display: flex; gap: 30px;
@@ -454,6 +458,7 @@ textPath{font-size: 50px;}
 .scroll_box .pro_txtBox{white-space: nowrap;}
 .scroll_box .pro_txtBox button a{
    display: block; color: var(--deepyellow-color);
+   cursor: none;
 }
 
 .scroll_box .pro_txtBox p,button{font-size: 2rem;}
@@ -519,7 +524,6 @@ textPath{font-size: 50px;}
    width: 40rem; height: 60rem;
    border-radius: 1rem;
    border: 1px solid var(--blackgray-color);
-   cursor: pointer;
 }
 .exhib_img::before{
    content: "";
@@ -567,7 +571,6 @@ textPath{font-size: 50px;}
    color: white;
    font-size: 30px;
    font-weight: bold;
-   cursor: pointer;
 }
 
 
