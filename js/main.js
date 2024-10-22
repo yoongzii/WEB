@@ -36,6 +36,13 @@ $(window).on('mousemove',function(e){
    const x = e.clientX
    const y = e.clientY
    $('.cursor').css({left: x , top: y})
+
+   $('button, a, img').on('mouseover',function(){
+      $('.cursor').css({width: '80px', height:'80px', background: "rgba(228,182,26,0.5)"}).text("Click")
+      $(this).on('mouseleave', function(e){
+      $('.cursor').css({width: '12px', height:'12px', background: "rgba(228,182,26,1)"}).text("")
+      })
+   })
 })
 
 

@@ -50,11 +50,9 @@ scrollTrigger: {
 })
 
 
- const mainVisual = document.querySelector('#main_visual')
- let mainHeight= mainVisual.offsetHeight;
  const main = gsap.timeline()
 
- main.to('.title_under h2', {
+ main.to('.main_wrap h2', {
       x: -100,
       y: 500,
       fontSize: '8rem',
@@ -66,7 +64,7 @@ scrollTrigger: {
 
    ScrollTrigger.create({
       animation: main,
-      trigger: '.title_under',
+      trigger: '.main_wrap h2',
       start: `top top `,
       end: `30% top`,
       pin: true,
