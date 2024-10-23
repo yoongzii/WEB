@@ -400,7 +400,7 @@ header .inner {padding: 20px 3%;}
    padding: 8px;
 }
 .scroll_box .pro_txtBox{white-space: nowrap;}
-.scroll_box .pro_txtBox button a{
+.scroll_box .pro_txtBox button {
    display: block; color: var(--deepyellow-color);
    cursor: none;
 }
