@@ -35,7 +35,7 @@ gsap.to('#projectStart .circle_box', {
 
 let designPro = document.querySelector('.scroll_box')
 let heightRight = designPro.offsetHeight;
-console.log(heightRight)
+
 
 gsap.to('.pin_content', {
 color:'#E9EAEC',
@@ -51,24 +51,39 @@ scrollTrigger: {
 
 
  const main = gsap.timeline()
+ let greetWrap = document.querySelector('#visual')
+ let greetHeight = greetWrap.offsetHeight;
 
- main.to('.main_wrap h2', {
-      x: -100,
-      y: 500,
-      fontSize: '8rem',
-      zIndex: 1,
+ main.to('.wrap_inner .txt_left', {
+      xPercent: 400,
+      color:'#E4B61A',
+      textShadow : `6px 6px gray`,
+      transition: 'all 1s'
+
+
       }, 'text')
-     .to('.scroll', {
-     opacity:0
+      .to('.wrap_inner .txt_right', {
+      xPercent: -400,
+      color:'#E4B61A',
+      textShadow : `6px 6px gray`,
+      transition: 'all 1s'
          }, 'text')
+      .to('.visual_pin .scroll', {
+         display : 'none'
+      },'text')
+      // .to('.greeting_wrap .wave_path_text',  {
+      //    attr: {startOffset: "30%"},
+      // },'text')
 
    ScrollTrigger.create({
       animation: main,
-      trigger: '.main_wrap h2',
-      start: `top top `,
-      end: `60% top`,
+      trigger: '.visual',
+      start: `-1% top `,
+      end: `+=${greetHeight / 6} top`,
       pin: true,
       scrub: true,
       markers: false,
    })
+
+
 })//ready()

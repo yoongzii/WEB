@@ -47,10 +47,21 @@ $(window).on('mousemove',function(e){
 
 
 document.addEventListener("DOMContentLoaded", function() {
+   const btns = document.querySelectorAll('.exhib_btns button');
+   const imgBoxs = document.querySelectorAll('.exhib_img li');
    const images = document.querySelectorAll('.exhib_img .click_img');
    const modal = document.querySelector('#design_exhib .modal');
    const modalImg = document.querySelector('#design_exhib .modalImg');
    const closeBtn = document.querySelector('#design_exhib .modal .close');
+
+   // btns.forEach((btn , index) =>{
+   //    btn.addEventListener('click', function(){
+   //       imgBoxs.forEach(imgBox => {
+   //          imgBox.classList.remove('active')
+   //       })
+   //       imgBox[0].classList.add('active')
+   //    })
+   // })
 
    images.forEach(image => {
          image.addEventListener('click', function() {
