@@ -41,7 +41,6 @@ $(window).on('mousemove',function(e){
    })
 })
 
-
 }) //ready()
 
 
@@ -52,16 +51,6 @@ document.addEventListener("DOMContentLoaded", function() {
    const modal = document.querySelector('#design_exhib .modal');
    const modalImg = document.querySelector('#design_exhib .modalImg');
    const closeBtn = document.querySelector('#design_exhib .modal .close');
-
-   // const iframe =document.querySelector('#design_pro .frame_modal');
-   // const iframeImg =document.querySelector('#design_pro .frame_modal img');
-   // const frameClose = document.querySelector('#design_pro .frame_close');
-   // const codingImgs = document.querySelectorAll('.li_wrap .img_box .coding_img');
-
-
-   // $('.modal').on('click', function(){
-   //    $(this).css('display' ,'block')
-   // })
 
    images.forEach(image => {
          image.addEventListener('click', function() {
@@ -87,21 +76,25 @@ document.addEventListener("DOMContentLoaded", function() {
          }
       });
 
-      // codingImgs.forEach(codingImgs => {
-      //    codingImgs.on('click', function(){
-      //       iframeImg.src = this.src
-      //       iframe.style.dispaly = 'block'
 
-      //       setTimeout(() => {
-      //          iframeImg.style.bottom = '0';
-      //    }, 10);
-      //    })
-      // })
 
-      // frameClose.on('click', function(){
-      //    iframe.style.dispaly = 'none'
-      // })
+// const codingImgs = document.querySelectorAll('.li_wrap .img_box img');
+const codingAs = document.querySelectorAll('.li_wrap .img_box a');
+const iframeSrc = document.querySelector('.frameBox iframe');
+const frameBox = document.querySelector('.frameBox');
+const frameClose = document.querySelector('.frame_close button');
 
+
+codingAs.forEach(codingA => {
+   codingA.addEventListener('click', function(){
+      iframeSrc.src = codingA.href;
+      frameBox.style.display = 'flex';
+   })
+})
+
+frameClose.addEventListener('click', function(){
+   frameBox.style.display = 'none';
+})
 
 });
 
