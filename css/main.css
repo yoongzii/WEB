@@ -548,48 +548,60 @@ header .inner {padding: 20px 3%;}
 .exhib_txt strong{font-size: 6rem; line-height: 6rem; }
 .exhib_txt p{font-size: 3rem; line-height: 3rem; }
 
-
-
 .exhib_left .exhib_btns{
-   display: flex; gap: 2rem; text-align: center;
+   display: flex; gap: 2rem;
+   align-items: center;
 }
 .exhib_left .exhib_btns button{
-   display: block; width: 12rem; height: 5rem;
+   display: block; width: 14rem; height: 4rem;
    border: 1px solid var(--main-color);
    color: var(--main-color);
    font-size: 1.8rem;
    border-radius: 2rem;
+   text-align: center;
 }
 
 .exhib_left .exhib_btns button:hover{
    color: var(--deepyellow-color);
    border: 1px solid var(--deepyellow-color);
 }
+.img_wrap {
+   display: flex; flex-direction: column;
+   align-items: flex-end; gap: 5rem;
+}
+.img_wrap li{display: none;}
+/* .img_wrap li:nth-child(2){display: none;} */
+
+.img_wrap li {display: flex; gap: 6rem; position: relative;}
 
 
-
-
-.exhib_img{display: flex; gap: 6rem; position: relative;}
-.exhib_img img{
-   width: 40rem; height: 60rem;
-   border-radius: 1rem;
+.img_wrap li img{
+   width: 40rem; height: 55rem;
+   border-radius: 1rem; object-fit: cover;
    border: 1px solid var(--blackgray-color);
 }
-.exhib_img::before{
+.img_wrap li::before{
    content: "";
-   height: 11.5rem;
+   position: absolute; top: -10.2rem; left: 25%;
+   height: 11rem;
    border: 1px solid var(--main-color);
    opacity: 0.2;
-   position: absolute; top: -11.5rem; left: 25%;
    z-index: -1;
 }
-.exhib_img::after{
+.img_wrap li::after{
    content: "";
+   position: absolute; top: -10.2rem; left: 75%;
    height: 11.5rem;
    border: 1px solid var(--main-color);
    opacity: 0.2;
-   position: absolute; top: -11.5rem; left: 75%;
    z-index: -1;
+   }
+
+   .img_wrap .viewBox a{
+      display: block;
+      font-family: var(--eng-font);
+      font-size: 2rem;
+      color: var(--main-color);
    }
 
 #design_exhib .modal {
@@ -656,12 +668,12 @@ footer .inner{
 .contact_btn a{
    display: flex; align-items: center;
    justify-content: center;
-color: var(--main-color);
-font-size: 2rem;
-border: 1px solid var(--main-color);
-width: 18rem;
-border-radius: 5rem;
-padding: 1rem;
+   color: var(--main-color);
+   font-size: 2rem;
+   border: 1px solid var(--main-color);
+   width: 18rem;
+   border-radius: 5rem;
+   padding: 1rem;
 }
 
 footer .copyright {

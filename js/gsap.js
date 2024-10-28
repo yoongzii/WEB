@@ -77,7 +77,7 @@ scrollTrigger: {
 
    ScrollTrigger.create({
       animation: main,
-      trigger: '.visual',
+      trigger: '#visual',
       start: `-1% top `,
       end: `+=${greetHeight / 6} top`,
       pin: true,

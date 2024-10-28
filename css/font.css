@@ -105,17 +105,17 @@
 /* 영문 helvetica */
 @font-face {
    font-family: 'helvetica';
-   src: url(../font/helvetica/Helvetica\ Light.ttf);
+   src: url(../fonts/Helvetica-Light.ttf);
    font-weight: 300;
 }
 @font-face {
    font-family: 'helvetica';
-   src: url(../font/helvetica/Helvetica.ttf);
+   src: url(../fonts/Helvetica.ttf);
    font-weight: 400;
 }
 @font-face {
    font-family: 'helvetica';
-   src: url(../font/helvetica/Helvetica\ Bold.ttf);
+   src: url(../fonts/Helvetica-Bold.ttf);
    font-weight: 700;
 }
 
@@ -123,6 +123,6 @@
 
 @font-face {
    font-family: 'cera';
-   src: url(../font/Cera-Pro/Demo_Fonts/Fontspring-DEMO-cerapro-medium.otf);
+   src: url(../fonts/cerapro-medium.otf);
    font-weight: 400;
 }
