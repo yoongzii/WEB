@@ -4,28 +4,28 @@
 
 /* 한글 SUIT */
 @font-face {
-   font-family: 'SUIT';
+   font-family:'SUIT';
    src: url(../fonts/SUIT-Bold.woff2);
    font-weight: 700;
 }
 @font-face {
-   font-family: 'SUIT';
+   font-family:'SUIT';
    src: url(../fonts/SUIT-Medium.woff2);
    font-weight: 500;
 }
 @font-face {
-   font-family: 'SUIT';
+   font-family:'SUIT';
    src: url(../fonts/SUIT-Regular.woff2);
    font-weight: 400;
 }
 /* 한글 NotoSansKR */
 @font-face {
-   font-family: 'NotoSansKR';
+   font-family:'NotoSansKR';
    src: url(../fonts/NotoSansKR-Bold.ttf);
    font-weight: 700;
 }
 @font-face {
-   font-family: 'NotoSansKR';
+   font-family:'NotoSansKR';
    src: url(../fonts/NotoSansKR-Medium.ttf);
    font-weight: 500;
 }
@@ -36,7 +36,7 @@
 }
 /* 한글 Pretendard */
 @font-face {
-	font-family: 'Pretendard';
+	font-family:'Pretendard';
 	font-weight: 400;
 	font-display: swap;
 	src: url(../fonts/PretendardVariable.ttf);
@@ -44,19 +44,19 @@
 
 /* 한글 KOPUBWORL돋움*/
 @font-face {
-	font-family: 'Kopubworld';
+	font-family:'Kopubworld';
 	font-weight: 300;
 	font-display: swap;
 	src: url(../fonts/KOPUBWORLD_TTF_FONTS/KoPubWorld\ Dotum\ Light.ttf);
 }
 @font-face {
-	font-family: 'Kopubworld';
+	font-family:'Kopubworld';
 	font-weight: 400;
 	font-display: swap;
 	src: url(../fonts/KOPUBWORLD_TTF_FONTS/KoPubWorld\ Dotum\ Medium.ttf);
 }
 @font-face {
-	font-family: 'Kopubworld';
+	font-family:'Kopubworld';
 	font-weight: 700;
 	font-display: swap;
 	src: url(../fonts/KOPUBWORLD_TTF_FONTS/KoPubWorld\ Dotum\ Bold.ttf.ttf);
@@ -65,64 +65,51 @@
 /* 영문 Times new roman */
 
 @font-face {
-   font-family: 'Open sans';
+   font-family:'Open sans';
    src: url(../fonts/Open_Sans/static/OpenSans_Condensed-Medium.ttf);
    font-weight: 400;
 }
 @font-face {
-   font-family: 'Open sans';
+   font-family:'Open sans';
    src: url(../fonts/Open_Sans/static/OpenSans-Bold.ttf);
    font-weight: 700;
 }
 @font-face {
-   font-family: 'Times new roman';
+   font-family:'Times new roman';
    src: url(../fonts/Times\ New\ Roman.ttf);
    font-weight: 400;
 }
 @font-face {
-   font-family: 'Montserrat';
+   font-family:'Montserrat';
    src: url(../fonts/Montserrat-Bold.woff2);
    font-weight: 700;
 }
 @font-face {
-   font-family: 'Montserrat';
+   font-family:'Montserrat';
    src: url(../fonts/Montserrat-ExtraBold.woff2);
    font-weight: 800;
 }
 @font-face {
-   font-family: 'Montserrat';
+   font-family:'Montserrat';
    src: url(./fonts/Montserrat-Medium.woff2);
    font-weight: 500;
 }
 
 /* 영문 BellMt */
 @font-face {
-   font-family: 'Bell Mt ';
+   font-family:'Bell Mt ';
    src: url(./fonts/bell-mt.ttf);
    font-weight: 400;
 }
 
 /* 영문 helvetica */
 @font-face {
-   font-family: 'helvetica';
-   src: url(../fonts/Helvetica-Light.ttf);
-   font-weight: 300;
-}
-@font-face {
-   font-family: 'helvetica';
+   font-family:'helvetica';
    src: url(../fonts/Helvetica.ttf);
    font-weight: 400;
 }
 @font-face {
-   font-family: 'helvetica';
+   font-family:'helvetica';
    src: url(../fonts/Helvetica-Bold.ttf);
    font-weight: 700;
-}
-
-/* 영문 cera */
-
-@font-face {
-   font-family: 'cera';
-   src: url(../fonts/cerapro-medium.otf);
-   font-weight: 400;
 }
