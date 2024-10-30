@@ -5,21 +5,20 @@
       --main-color:#E9EAEC;
       --blackgray-color:#2A2E34;
       --black-color:#0B0C0C;
-      --eng-font: 'helvetica', 'Bell Mt'
+      --eng-font: 'helvetica', 'Bell Mt';
+      --kor-font: 'Pretendard','SUIT','Kopubworld','NotoSansKR', sans-serif;
    }
 
-/* font-family: 'helvetica','Bell Mt' */
 * {
-   font-family: 'Pretendard','SUIT','Kopubworld','NotoSansKR', sans-serif;
+   font-family: var(--kor-font);
    font-size: 10px;
 }
 
 body{
-
    background-color: var(--black-color);
    overflow-x: hidden;
    cursor: none;
-
+   font-family: var(--kor-font);
 }
 
 
@@ -346,29 +345,6 @@ header .inner {padding: 20px 3%;}
    padding-bottom: 240px;
 }
 
-#design_pro .frame_wrap .frameBox {background: rgba(0, 0, 0, 0.8);}
-
-#design_pro .frame_wrap .frameBox{
-   display: none; flex-direction: column; gap: 2rem;
-   width: 80%; height: 100vh;
-   position: absolute; left: 50%; top: 50%; right: 0;
-   transform: translate(-50%, -50%);
-   border-radius: 1rem; overflow: hidden;
-}
-
-#design_pro .frameBox iframe{
-   width: 100%; height: 90%;
-
-}
-
-#design_pro .frameBox .frame_close button{
-   display: block; width: 100%;
-   text-align: end; padding: 2rem;
-   color: red
-}
-
-#design_pro .frameBox .frame_close button i{font-size: 4rem;}
-
 #design_pro .designPro_pin {
    width: 40%;
    height: 100vh;
@@ -503,15 +479,15 @@ header .inner {padding: 20px 3%;}
    .design_scroll .pro_txtBox p{font-size: 1.6rem;}
 }
    /* design_exhib */
-
+#design_exhib{
+   height: auto;
+   font-family: var(--kor-font);
+}
 #design_exhib .inner{
-   height: 100%;
    display: flex; flex-direction: column;
-   align-items: center;
-   justify-content: space-between;
-   font-family: 'helvetica','Bell Mt';
+   align-items: center; justify-content: space-between;
+   font-family: var(--eng-font);
    overflow-x: hidden;
-
 }
 
 .flow_content_wrap{
@@ -533,87 +509,92 @@ header .inner {padding: 20px 3%;}
    to {transform: translateX(-100%);}
 }
 
-.exhib_wrap{
-   width: 1600px;
-   display: flex; gap: 10rem;
-   align-items: flex-start;
-   justify-content: space-between;
-   padding-bottom: 50px;
-}
-
-.exhib_left{
-   display: flex; flex-direction: column; gap: 5rem;
-   color: var(--main-color); }
-
-.exhib_txt{
-   display: flex; flex-direction: column;
-   align-items: flex-start;
-   gap: 2rem;
-}
-.exhib_txt strong{font-size: 6rem; line-height: 6rem; }
-.exhib_txt p{font-size: 3rem; line-height: 3rem; }
-
-.exhib_left .exhib_btns{
-   display: flex; gap: 2rem;
-   align-items: center;
-}
-.exhib_left .exhib_btns button{
-   display: block; width: 14rem; height: 4rem;
-   border: 1px solid var(--main-color);
+.exhib_zip .zip_txt strong{
+   display: flex;
+   flex-direction: column;
+   align-items: center; justify-content: center;
+   font-size: 6rem; line-height: 6rem;
    color: var(--main-color);
-   font-size: 1.8rem;
-   border-radius: 2rem;
+   /* background: var(--deepyellow-color); */
+   padding: 4rem;
+   font-family: var(--eng-font);
+}
+
+.exhib_zip .container_wrap {
+   display: flex; flex-direction: column;
+   align-items: center; justify-content: center;
+}
+
+.container_wrap .container{
+   display: grid; height: 45rem;
+   grid-template-columns: repeat(4, 1fr);
+   column-gap: 3rem; row-gap: 5rem;
+   place-items: start center;
+   overflow: hidden;
+}
+.container_wrap .container.active{height: auto;}
+
+.container_wrap .container .item{
+   display: flex; flex-direction: column;
+   align-items: center; justify-content: space-between;
+   position: relative; border: 1px solid red;
+}
+.container_wrap .container .item .img_zip{
+   height: 40rem;
+   object-fit: cover;
+   overflow: hidden;
+}
+
+.container_wrap .container .item .img_zip img{
+   width: 100%;
+}
+
+.container_wrap .container .item .img_subText{
+   display: flex; width: 100%; height: 100%;
+   flex-direction: column;
+   align-items: center; justify-content: center;
+   font-family: var(--eng-font);
+   color: var(--main-color);
+   background:rgba(0, 0, 0, 0.8);
+   position: absolute; left: 0; top: 50%;
+   transform: translateY(-50%);
+   opacity: 0;
+}
+
+.container_wrap .container .item:hover .img_subText{opacity: 1;}
+
+.container_wrap .container .item .img_subText strong{
+   width: 14rem;height: 5rem;
+   font-size: 3rem;line-height: 5rem; margin-bottom: 1rem;
+   border: 1px solid var(--main-color);
+   border-radius: 5rem;
    text-align: center;
 }
 
-.exhib_left .exhib_btns button:hover{
-   color: var(--deepyellow-color);
-   border: 1px solid var(--deepyellow-color);
-}
-.img_wrap {
-   display: flex; flex-direction: column;
-   align-items: flex-end; gap: 5rem;
+.container_wrap .container .item .img_subText p{
+   font-size: 3.2rem;
+   padding: 2rem 0;
 }
 
-.img_wrap li {
-   display: flex; flex-direction: row; gap: 6rem;
-   position: relative;
+.container_wrap .container .item .img_subText span{
+   display: block; text-align: center;
+   font-size: 1.6rem; line-height: 2.5rem;
 }
 
-.img_wrap li img{
-   width: 40rem; height: 55rem;
-   border-radius: 1.5rem; object-fit: cover;
-   border: 1px solid var(--blackgray-color);
-   overflow: hidden;
-   object-position:top
-}
-
-.img_wrap li::before{
-   content: "";
-   position: absolute; top: -8.2rem; left: 25%;
-   height: 11rem;
+.container_wrap .moreBox {
+   display: flex; flex-direction: column; align-items: center;
    border: 1px solid var(--main-color);
-   opacity: 0.2;
-   z-index: -1;
+   text-align: center;
+   padding: 1rem; font-size: 1.8rem;
+   width: 18rem;
+   color: var(--main-color);
+   margin-top: 5rem;
+   font-family: var(--kor-font);
+
 }
+.container_wrap .moreBox .total{font-size: 1.6rem;}
 
-.img_wrap li::after{
-   content: "";
-   position: absolute; top: -8.2rem; left: 75%;
-   height: 11rem;
-   border: 1px solid var(--main-color);
-   opacity: 0.2;
-   z-index: -1;
-   }
-
-   .img_wrap .viewBox a{
-      display: block;
-      font-family: var(--eng-font);
-      font-size: 2rem;
-      color: var(--main-color);
-      padding-bottom: 2rem;
-   }
-
+/* modal 숨김 */
 #design_exhib .modal {
    display: none;
    position: fixed;
@@ -675,7 +656,6 @@ footer .inner{
 .contact_btnWrap {
    display: flex; gap: 3rem;
    align-items: center;
-
 }
 
 .contact_btn a{
@@ -693,7 +673,6 @@ footer .copyBottom {
    position: absolute; bottom: 0; left: 50%;
    transform: translateX(-50%);
 }
-
 
 @media screen and (max-width: 1440px) {
    .contact_txt strong {font-size: 16rem; line-height: 16rem;}
