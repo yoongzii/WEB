@@ -36,7 +36,7 @@ gsap.to('#exhib_more', {
       end: `top top`,
       pin: true,
       scrub: true,
-      markers: true,
+      markers: false,
    }
 })
 

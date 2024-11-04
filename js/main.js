@@ -40,72 +40,72 @@ $('button, a, .img_box img, .img_wrap img, .click_img').on('mouseover',function(
 })
 
 //exhib_ container
-const items = $('.container_wrap .container');
-const openBox = $('.container_wrap .moreBox .openBox');
-const total = $('.container_wrap .container .item').length;
+const total = $('.container .item').length;
+
+let count = 1;
+let current = 4
 let height = 450;
+let showTotal = '더보기';
+let state = true
+
+
+
+$('.moreBox .total').text(total)
+$('.moreBox  .show').text(current)
 
 $('.container_wrap .moreBox').on('click',function(e){
    e.preventDefault();
-   if(openBox.text() === '더보기'){
-      height += 450;
-      items.css('height', height)
-   }
-      else if(openBox.text() === '더보기'){
-         openBox.text('접기')
-   } else{
-      openBox.text('더보기')}
 
+   if(state) {
+      if(total / 4 > count) {
+         count++
+         height += 450
+         $('.container').css('height', height)
+         current = total - (total - (count * 4))
+
+         if(current >= total) {
+            current = current - (current - total)
+            showTotal = '닫기'
+            state = false
+         }
+      } else {
+         count = count
+      }
+   } else {
+      $('.container').css('height', 450)
+      current = 4
+      showTotal = '더보기'
+      state = true;
+      count = 1
+      height = 450
+   }
+   $('.moreBox  .show').text(current)
+   $('.moreBox .openBox').text(showTotal)
 })
 
-i = 0
-const showitem = $('.container_wrap .container .item').slice(0, 4).length
-// $('.container_wrap .moreBox .total').text( `( ${showitem} / ${total} )`)
 
-for(i = 0; i <= total; i ++) {
-   $('.container_wrap .moreBox .total').text( `( ${i} / ${i} )`)
-}
-
-
-
-// exhib_btn
-// $('.img_wrap ul li').hide();
-// $('.img_wrap ul li:first').show();
-
-// $('.exhib_btns button').on('click', function() {
-//    let index = $(this).parent().index();
-//    $('.img_wrap ul li').hide();
-//    $('.img_wrap ul li').eq(index).show();
-// });
-
-// const images = document.querySelectorAll('.exhib_zip .container_wrap .img_zip .click_img');
-// const modal = document.querySelector('#design_exhib .modal');
-// const modalImg = document.querySelector('#design_exhib .modalImg');
-// const closeBtn = document.querySelector('#design_exhib .modal .close');
-
-// images.forEach(image => {
-//    image.addEventListener('click', function() {
-//       modalImg.src = this.src;
-//       modal.style.display = 'block';
-//       setTimeout(() => {
-//             modal.style.bottom = '0';
-//       }, 10);
-//    });
-//    });
-
-//    closeBtn.addEventListener('click', function() {
-//       modal.style.bottom = '-100%';
-//       setTimeout(() => {
-//          modal.style.display = 'none';
-//       }, 500);
-//    });
-
-
-//    modal.addEventListener('click', function(event) {
-//       if (event.target === modal) {
-//          closeBtn.click();
-//       }
-//    });
+// init Isotope
+var $grid = $('.design_scroll ul').isotope({
+ });
+ $('.filter-button-group').on( 'click', 'button', function() {
+   let filterValue = $(this).attr('data-filter');
+   $grid.isotope({ filter: filterValue });
+ });
 
 
 
+const imgSrc = $('.item').find('.img_zip img').attr('src');
+const subtextStrong = $('.item').find('.modal_subText strong').text();
+const subtextP = $('.item').find('.modal_subText p').text();
+
+   $('.item').on('click', function() {
+      $('.modalImg').attr('src', imgSrc);
+      $('.modal_explain strong').text(subtextStrong);
+      $('.modal_explain p').text(subtextP);
+
+      $('.modal').css('display', 'block');
+   });
+
+   $('.close').on('click', function() {
+      $('.modal').css('display', 'none');
+   });
