@@ -85,16 +85,19 @@ $('.container_wrap .moreBox').on('click',function(e){
 
 
 // init Isotope
-var $grid = $('.design_scroll ul').isotope({
+const $grid = $('.design_scroll ul').isotope({
  });
  $('.filter-button-group').on( 'click', 'button', function() {
    let filterValue = $(this).attr('data-filter');
-   $grid.isotope({ filter: filterValue });
+   $grid.isotope({ filter: filterValue });0
+
+   let ypos = $('#design_pro').offset().top;
+   window.scrollTo(0, ypos)
  });
 
 
 
-const imgSrc = $('.item').find('.img_zip img').attr('src');
+const imgSrc = $('.container .item').find('.img_zip img').attr('src');
 const subtextStrong = $('.item').find('.modal_subText strong').text();
 const subtextP = $('.item').find('.modal_subText p').text();
 

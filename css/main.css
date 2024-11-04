@@ -342,10 +342,11 @@ header .inner {padding: 20px 3%;}
    display: flex;
    font-family: var(--eng-font);
    position: relative;
-   padding-bottom: 240px;
+   padding-bottom: 10px;
 }
 
 #design_pro .designPro_pin {
+   position: sticky;top: 0;
    width: 40%;
    height: 100vh;
    display: flex;
@@ -365,7 +366,7 @@ header .inner {padding: 20px 3%;}
    font-size: 2rem;
    border: 1px solid inherit;
 }
-#design_pro .design_scroll{width: 60%;}
+#design_pro .design_scroll{width: 60%;min-height: 100vh;}
 #design_pro .design_scroll ul {
    height: 100%; white-space: nowrap;
    flex-wrap: wrap; padding: 20px;
@@ -566,9 +567,11 @@ header .inner {padding: 20px 3%;}
    opacity: 0;
 }
 
+.container_wrap .container .item .modal_subText{display: none;}
+
 .container_wrap .container .item:hover .img_subText{
-   /* z-index: -1; */
-   opacity: 1; font-size: 3rem;}
+   opacity: 1; font-size: 3rem;
+}
 
 .container_wrap .container .item .img_subText strong{
    width: 14rem; height: 5rem;
