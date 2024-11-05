@@ -62,7 +62,7 @@
 	src: url(../fonts/KOPUBWORLD_TTF_FONTS/KoPubWorld\ Dotum\ Bold.ttf.ttf);
 }
 
-/* 영문 Times new roman */
+
 
 @font-face {
    font-family:'Open sans';
@@ -74,6 +74,8 @@
    src: url(../fonts/Open_Sans/static/OpenSans-Bold.ttf);
    font-weight: 700;
 }
+
+/* 영문 Times new roman */
 @font-face {
    font-family:'Times new roman';
    src: url(../fonts/Times\ New\ Roman.ttf);

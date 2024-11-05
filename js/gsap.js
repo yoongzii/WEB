@@ -75,7 +75,7 @@ color:'#E9EAEC',
    scrollTrigger: {
       trigger: '.designPro_pin',
       start: 'top top',
-      end: `+=${designHeight / 2} top`,
+      end: `+=${designHeight - 600} top`,
       pin: true,
       scrub: true,
       markers: false,
