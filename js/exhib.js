@@ -36,11 +36,7 @@ gsap.to('#exhib_more', {
       end: `top top`,
       pin: true,
       scrub: true,
-<<<<<<< HEAD
       markers: true,
-=======
-      markers: false,
->>>>>>> refs/remotes/origin/main
    }
 })
 
