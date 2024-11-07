@@ -85,15 +85,33 @@ $('.container_wrap .moreBox').on('click',function(e){
 
 
 // init Isotope
+<<<<<<< HEAD
 var $grid = $('.design_scroll ul').isotope({
  });
  $('.filter-button-group').on( 'click', 'button', function() {
    let filterValue = $(this).attr('data-filter');
    $grid.isotope({ filter: filterValue });
+=======
+const $grid = $('.design_scroll ul').isotope({
+ });
+ $('.filter-button-group').on( 'click', 'button', function() {
+   let filterValue = $(this).attr('data-filter');
+   $grid.isotope({ filter: filterValue });0
+
+   let ypos = $('#design_pro').offset().top;
+   window.scrollTo(0, ypos)
+>>>>>>> refs/remotes/origin/main
  });
 
 
+ $('.item').on('click', function() {
+   const imgSrc = $(this).find('.img_zip img').attr('src');
+   const subtextStrong = $(this).find('.modal_subText strong').text();
+   const subtextP = $(this).find('.modal_subText p').text();
+   const subtextSpan = $(this).find('.modal_subText span').text();
+   // const subtextSpan = $(this).find('.modalSpan').text();
 
+<<<<<<< HEAD
  //modal-----
 //  const btnShow = $('.item .img_subText button')
 //  const imgShow = $('.item .img_zip img')
@@ -151,14 +169,28 @@ var $grid = $('.design_scroll ul').isotope({
 //          closeBtn.click();
 //       }
 //    });
+=======
+    $('.modalImg').attr('src', imgSrc);
+    $('.modal_explain .explain_title strong').text(subtextStrong);
+    $('.modal_explain .explain_title p').text(subtextP);
+    $('.modal_explain span').text(subtextSpan);
+>>>>>>> refs/remotes/origin/main
 
+    $('.modal').css('display', 'block');
+});
 
+<<<<<<< HEAD
    $('.item').on('click', function() {
       const imgSrc = $(this).find('.img_zip img').attr('src');
       const subtextStrong = $(this).find('.modal_subText strong').text();
       const subtextP = $(this).find('.modal_subText p').text();
       const subtextSpan = $(this).find('.modal_subText span').text();
       // const subtextSpan = $(this).find('.modalSpan').text();
+=======
+$('.close').on('click', function() {
+    $('.modal').css('display', 'none');
+});
+>>>>>>> refs/remotes/origin/main
 
        $('.modalImg').attr('src', imgSrc);
        $('.modal_explain .explain_title strong').text(subtextStrong);

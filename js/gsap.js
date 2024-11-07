@@ -70,6 +70,7 @@ gsap.to('#projectStart .circle_box', {
 let designPro = document.querySelector('.design_scroll')
 let designHeight = designPro.offsetHeight;
 
+<<<<<<< HEAD
 gsap.to('.designPro_pin', {
 color:'#E9EAEC',
    scrollTrigger: {
@@ -81,6 +82,20 @@ color:'#E9EAEC',
       markers: false,
    }
 })
+=======
+// gsap.to('.designPro_pin', {
+// color:'#E9EAEC',
+//    scrollTrigger: {
+//       trigger: '#design_pro',
+//       start: 'top top',
+//       // end: `+=${designHeight - 600} top`,
+//       end: 'bottom top',
+//       pin: true,
+//       scrub: true,
+//       markers: false,
+//    }
+// })
+>>>>>>> refs/remotes/origin/main
 
 
 

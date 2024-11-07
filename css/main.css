@@ -342,10 +342,11 @@ header .inner {padding: 20px 3%;}
    display: flex;
    font-family: var(--eng-font);
    position: relative;
-   padding-bottom: 240px;
+   padding-bottom: 50px;
 }
 
 #design_pro .designPro_pin {
+   position: sticky;top: 0;
    width: 40%;
    height: 100vh;
    display: flex;
@@ -353,7 +354,6 @@ header .inner {padding: 20px 3%;}
    justify-content: center; align-items: center;
    font-size: 6rem; color: #FFF;
    color: var(--deepyellow-color);
-
 }
 
 #design_pro .designPro_pin p {
@@ -365,7 +365,11 @@ header .inner {padding: 20px 3%;}
    font-size: 2rem;
    border: 1px solid inherit;
 }
+<<<<<<< HEAD
 #design_pro .design_scroll{width: 60%;}
+=======
+#design_pro .design_scroll{width: 60%;min-height: 100vh;}
+>>>>>>> refs/remotes/origin/main
 #design_pro .design_scroll ul {
    height: 100%; white-space: nowrap;
    flex-wrap: wrap; padding: 20px;
@@ -484,61 +488,54 @@ header .inner {padding: 20px 3%;}
    .design_scroll .pro_txtBox p{font-size: 1.6rem;}
 }
    /* design_exhib */
-#design_exhib{
-   height: auto;
-   font-family: var(--kor-font);
-}
-#design_exhib .inner{
-   display: flex; flex-direction: column;
-   align-items: center; justify-content: space-between;
-   font-family: var(--eng-font);
-   overflow-x: hidden;
-}
 
-.flow_content_wrap{
-   overflow: hidden; width: 100vw;z-index: 1;
-   border-bottom: 1px solid var(--main-color);
-   opacity: 0.2;
-}
+   #design_exhib{
+      height: auto;
+      font-family: var(--kor-font);
+   }
+   #design_exhib .inner{
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: space-between;
+      font-family: var(--eng-font);
+      overflow-x: hidden;
+   }
 
-.flow_content_wrap .flow_content{display: flex;}
-.flow_content_wrap p{
-   font-weight: 700;font-size: 150px; line-height: 150px;
-   white-space: nowrap; margin-right: 50px ;
-   color: var(--main-color);
-   animation: flow 15s infinite linear;
-}
+   .flow_content_wrap{
+      overflow: hidden; width: 100vw;z-index: 1;
+      border-bottom: 1px solid var(--main-color);
+      opacity: 0.2;
+   }
 
-@keyframes flow {
-   form {transform: translateX(0%);}
-   to {transform: translateX(-100%);}
-}
+   .flow_content_wrap .flow_content{display: flex;}
+   .flow_content_wrap p{
+      font-weight: 700;font-size: 150px; line-height: 150px;
+      white-space: nowrap; margin-right: 50px ;
+      color: var(--main-color);
+      animation: flow 15s infinite linear;
+   }
 
-.exhib_zip .zip_txt strong{
-   display: flex;
-   flex-direction: column;
-   align-items: center; justify-content: center;
-   font-size: 6rem; line-height: 6rem;
-   color: var(--main-color);
-   /* background: var(--deepyellow-color); */
-   padding: 4rem;
-   font-family: var(--eng-font);
-}
+   @keyframes flow {
+      form {transform: translateX(0%);}
+      to {transform: translateX(-100%);}
+   }
 
-.exhib_zip .container_wrap {
-   display: flex; flex-direction: column;
-   align-items: center; justify-content: center;
-}
+   .exhib_zip .zip_txt strong{
+      display: flex;
+      flex-direction: column;
+      align-items: center; justify-content: center;
+      font-size: 6rem; line-height: 6rem;
+      color: var(--main-color);
+      /* background: var(--deepyellow-color); */
+      padding: 4rem;
+      font-family: var(--eng-font);
+   }
 
-.container_wrap .container{
-   display: grid; height: 45rem;
-   grid-template-columns: repeat(4, 1fr);
-   column-gap: 3rem; row-gap: 5rem;
-   place-items: start center;
-   overflow: hidden;
-}
-.container_wrap .container.active{height: auto;}
+   .exhib_zip .container_wrap {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+   }
 
+<<<<<<< HEAD
 .container_wrap .container .item{
    display: flex; flex-direction: column;
    align-items: center; justify-content: space-between;
@@ -549,11 +546,29 @@ header .inner {padding: 20px 3%;}
    object-fit: cover;
    overflow: hidden;
 }
+=======
+   .container_wrap .container{
+      display: grid; height: 45rem;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 3rem; row-gap: 5rem;
+      place-items: start center;
+      overflow: hidden;
+   }
+   .container_wrap .container.active{height: auto;}
+>>>>>>> refs/remotes/origin/main
 
-.container_wrap .container .item .img_zip img{
-   width: 100%;
-}
+   .container_wrap .container .item{
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: space-between;
+      position: relative;
+   }
+   .container_wrap .container .item .img_zip{
+      height: 40rem;
+      object-fit: cover;
+      overflow: hidden;
+   }
 
+<<<<<<< HEAD
 .container_wrap .container .item .img_subText{
    display: flex; width: 100%; height: 100%;
    flex-direction: column; gap: 2rem;
@@ -621,6 +636,133 @@ header .inner {padding: 20px 3%;}
    font-size: 30px;
    font-weight: bold;
 }
+=======
+   .container_wrap .container .item .img_zip img{
+      width: 100%;
+   }
+
+   .container_wrap .container .item .img_subText{
+      display: flex; width: 100%; height: 100%;
+      flex-direction: column; gap: 2rem;
+      align-items: center; justify-content: center;
+      font-family: var(--eng-font);
+      color: var(--main-color);
+      background:rgba(0, 0, 0, 0.8);
+      position: absolute; left: 0; top: 50%;
+      transform: translateY(-50%);
+      opacity: 0;
+   }
+
+   .container_wrap .container .item:hover .img_subText{
+      /* z-index: -1; */
+      opacity: 1; font-size: 3rem;}
+
+   .container_wrap .container .item .img_subText strong{
+      width: 14rem; height: 5rem;
+      line-height: 5rem; margin-bottom: 1rem;
+      border: 1px solid var(--main-color);
+      border-radius: 5rem;
+      text-align: center;
+   }
+
+   .container_wrap .container .item .img_subText span{
+      display: block; text-align: center;
+      font-size: 1.6rem; line-height: 2.5rem;
+   }
+   .container_wrap .container .item .img_subText button{
+      display: block; color: var(--main-color);
+      font-size: 1.8rem;
+   }
+
+   .container_wrap .moreBox {
+      display: flex; flex-direction: row; align-items: center; justify-content: center;
+      border: 1px solid var(--main-color);
+      text-align: center;
+      padding: 1rem; font-size: 1.8rem; line-height: 2rem;
+      width: 20rem;
+      color: var(--main-color);
+      font-family: var(--kor-font);
+
+   }
+   .container_wrap .moreBox .moreNum{font-size: 1.6rem;}
+   .container_wrap .container .modal_subText{display: none;}
+   /* modal 숨김 */
+   #design_exhib .modal {
+      display: none; flex-direction: column;
+      position: fixed;
+      z-index: 1000;
+      left: 0; right: 0; top: 0;
+      bottom: -100%;
+      width: 100%;
+      max-height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      transition: bottom 0.5s ease;
+      overflow-y: auto;
+   }
+
+   #design_exhib .modal .modalBtn .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+   }
+
+   #design_exhib .modal .modal_content{
+      display: flex; flex-direction: column; gap: 4rem;
+      align-items: center; justify-content: center;
+      margin-top: 10rem;
+   }
+
+
+   #design_exhib .modal .modal_content .modal_explain{
+      display: flex;
+      /* flex-direction: column; */
+      align-items: center; justify-content: center;
+      gap: 3rem;
+      color: var(--main-color);
+      font-size: 2.8rem;
+      /* border: 1px solid red; */
+      width: 100%; padding: 2rem 0 ;
+   }
+
+   #design_exhib .modal .modal_content .modal_explain .explain_title{
+   display: flex;  flex-direction: column;
+   align-items: center; gap: 2rem;
+   position: relative;
+   border-right: 1px solid var(--main-color);
+   padding-right: 4rem;
+   }
+
+
+
+   #design_exhib .modal .modal_content .modal_explain .explain_title strong{
+      /* border: 1px solid var(--main-color);
+      border-radius: 2em;
+      padding: 2rem 3rem;
+      text-align: center;
+      width: 10rem; */
+
+   }
+
+   #design_exhib .modal .modal_content .modal_explain .explain_title p{
+      font-size: 5rem; line-height: 5rem;
+      color: var(--deepyellow-color);
+
+   }
+
+   #design_exhib .modal .modal_content span{
+      font-size: 2.2rem;
+   }
+
+
+   #design_exhib .modal .modalImgBox .modalImg {
+      margin: auto;
+      object-fit: cover;
+   }
+
+>>>>>>> refs/remotes/origin/main
 
 #design_exhib .modal .modal_content{
    display: flex; flex-direction: column; gap: 4rem;
