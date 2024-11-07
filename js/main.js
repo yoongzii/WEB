@@ -40,58 +40,103 @@ $('button, a, .img_box img, .img_wrap img, .click_img').on('mouseover',function(
 })
 
 //exhib_ container
-const items = $('.container_wrap .container');
-const openBox = $('.container_wrap .moreBox .openBox');
-const total = $('.container_wrap .container .item').length;
+const total = $('.container .item').length;
+
+let count = 1;
+let current = 4
 let height = 450;
+let showTotal = '더보기';
+let state = true
+
+
+
+$('.moreBox .total').text(total)
+$('.moreBox  .show').text(current)
 
 $('.container_wrap .moreBox').on('click',function(e){
    e.preventDefault();
-   if(openBox.text() === '더보기'){
-      height += 450;
-      items.css('height', height)
-   }
-      else if(openBox.text() === '더보기'){
-         openBox.text('접기')
-   } else{
-      openBox.text('더보기')}
 
+   if(state) {
+      if(total / 4 > count) {
+         count++
+         height += 450
+         $('.container').css('height', height)
+         current = total - (total - (count * 4))
+
+         if(current >= total) {
+            current = current - (current - total)
+            showTotal = '닫기'
+            state = false
+         }
+      } else {
+         count = count
+      }
+   } else {
+      $('.container').css('height', 450)
+      current = 4
+      showTotal = '더보기'
+      state = true;
+      count = 1
+      height = 450
+   }
+   $('.moreBox  .show').text(current)
+   $('.moreBox .openBox').text(showTotal)
 })
 
-i = 0
-const showitem = $('.container_wrap .container .item').slice(0, 4).length
-// $('.container_wrap .moreBox .total').text( `( ${showitem} / ${total} )`)
 
-for(i = 0; i <= total; i ++) {
-   $('.container_wrap .moreBox .total').text( `( ${i} / ${i} )`)
-}
+// init Isotope
+var $grid = $('.design_scroll ul').isotope({
+ });
+ $('.filter-button-group').on( 'click', 'button', function() {
+   let filterValue = $(this).attr('data-filter');
+   $grid.isotope({ filter: filterValue });
+ });
 
 
 
-// exhib_btn
-// $('.img_wrap ul li').hide();
-// $('.img_wrap ul li:first').show();
+ //modal-----
+//  const btnShow = $('.item .img_subText button')
+//  const imgShow = $('.item .img_zip img')
 
-// $('.exhib_btns button').on('click', function() {
-//    let index = $(this).parent().index();
-//    $('.img_wrap ul li').hide();
-//    $('.img_wrap ul li').eq(index).show();
-// });
+//  console.log(imgShow)
 
-// const images = document.querySelectorAll('.exhib_zip .container_wrap .img_zip .click_img');
+//  imgShow.on('click',function(e){
+//    e.preventDefault();
+
+//     if ($(this).src = $('.modal .modalImg').src){
+
+//       $('modal').css({'display' : 'flex', 'bottom': '0%'})
+//     }
+
+//  })
+
+
+// const subTexts = document.querySelectorAll('.item .img_subText');
+// // const images = document.querySelectorAll('.item .img_subText');
+// const images = document.querySelectorAll('.item .img_zip .click_img');
 // const modal = document.querySelector('#design_exhib .modal');
 // const modalImg = document.querySelector('#design_exhib .modalImg');
 // const closeBtn = document.querySelector('#design_exhib .modal .close');
 
-// images.forEach(image => {
+// images.forEach((image, index) => {
 //    image.addEventListener('click', function() {
 //       modalImg.src = this.src;
 //       modal.style.display = 'block';
 //       setTimeout(() => {
 //             modal.style.bottom = '0';
 //       }, 10);
+
 //    });
+
+//    subTexts[index].addEventListener('click',function(){
+//       modalImg.src= image.scr;
+//       modal.style.display = 'block';
+//       setTimeout(() => {
+//             modal.style.bottom = '0';
+//       }, 10);
+
 //    });
+//    })
 
 //    closeBtn.addEventListener('click', function() {
 //       modal.style.bottom = '-100%';
@@ -108,4 +153,21 @@ for(i = 0; i <= total; i ++) {
 //    });
 
 
+   $('.item').on('click', function() {
+      const imgSrc = $(this).find('.img_zip img').attr('src');
+      const subtextStrong = $(this).find('.modal_subText strong').text();
+      const subtextP = $(this).find('.modal_subText p').text();
+      const subtextSpan = $(this).find('.modal_subText span').text();
+      // const subtextSpan = $(this).find('.modalSpan').text();
 
+       $('.modalImg').attr('src', imgSrc);
+       $('.modal_explain .explain_title strong').text(subtextStrong);
+       $('.modal_explain .explain_title p').text(subtextP);
+       $('.modal_explain span').text(subtextSpan);
+
+       $('.modal').css('display', 'block');
+   });
+
+   $('.close').on('click', function() {
+       $('.modal').css('display', 'none');
+   });
