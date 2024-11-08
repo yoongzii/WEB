@@ -93,12 +93,22 @@ var $grid = $('.design_scroll ul').isotope({
  });
 
 
+ $('.item').on('click', function() {
+   const imgSrc = $(this).find('.img_zip img').attr('src');
+   const subtextStrong = $(this).find('.modal_subText strong').text();
+   const subtextP = $(this).find('.modal_subText p').text();
+   const subtextSpan = $(this).find('.modal_subText span').text();
+
+
+    $('.modal').css('display', 'block');
+});
+
    $('.item').on('click', function() {
       const imgSrc = $(this).find('.img_zip img').attr('src');
       const subtextStrong = $(this).find('.modal_subText strong').text();
       const subtextP = $(this).find('.modal_subText p').text();
       const subtextSpan = $(this).find('.modal_subText span').text();
-
+      // const subtextSpan = $(this).find('.modalSpan').text();
 
        $('.modalImg').attr('src', imgSrc);
        $('.modal_explain .explain_title strong').text(subtextStrong);

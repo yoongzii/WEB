@@ -66,6 +66,22 @@ gsap.to('#projectStart .circle_box', {
       }
  })
 
+//----- 프로젝트 ---//
+// let designPro = document.querySelector('.design_scroll')
+// let designHeight = designPro.offsetHeight;
+
+// gsap.to('.designPro_pin', {
+// color:'#E9EAEC',
+//    scrollTrigger: {
+//       trigger: '.designPro_pin',
+//       start: 'top top',
+//       end: `+=${designHeight - 600} top`,
+//       pin: true,
+//       scrub: true,
+//       markers: false,
+//    }
+// })
+
 
 
 
