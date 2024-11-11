@@ -90,6 +90,9 @@ var $grid = $('.design_scroll ul').isotope({
  $('.filter-button-group').on( 'click', 'button', function() {
    let filterValue = $(this).attr('data-filter');
    $grid.isotope({ filter: filterValue });
+   $('.filter-button-group button').removeClass('active')
+   $(this),addClass('active')
+
  });
 
 

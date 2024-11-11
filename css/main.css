@@ -365,6 +365,12 @@ header .inner {padding: 20px 3%;}
 #design_pro .designPro_pin .button-group button{
    font-size: 2rem;
    border: 1px solid inherit;
+   border-bottom: 2px solid var(--deepyellow-color);
+   /* border-bottom: none; */
+}
+
+#design_pro .designPro_pin .button-group button.active{
+   border-bottom: 2px solid var(--deepyellow-color);
 }
 #design_pro .design_scroll{width: 60%; min-height: 100vh;}
 #design_pro .design_scroll ul {
@@ -521,7 +527,6 @@ header .inner {padding: 20px 3%;}
    align-items: center; justify-content: center;
    font-size: 6rem; line-height: 6rem;
    color: var(--main-color);
-   /* background: var(--deepyellow-color); */
    padding: 4rem;
    font-family: var(--eng-font);
 }
@@ -589,7 +594,8 @@ header .inner {padding: 20px 3%;}
 }
 
 .container_wrap .moreBox {
-   display: flex; flex-direction: row; align-items: center; justify-content: center;
+   display: flex; flex-direction: row; 
+   align-items: center; justify-content: center;
    border: 1px solid var(--main-color);
    text-align: center;
    padding: 1rem; font-size: 1.8rem; line-height: 2rem;
@@ -600,6 +606,7 @@ header .inner {padding: 20px 3%;}
 }
 .container_wrap .moreBox .moreNum{font-size: 1.6rem;}
 .container_wrap .container .modal_subText{display: none;}
+
 /* modal 숨김 */
 #design_exhib .modal {
    display: none; flex-direction: column;
@@ -632,12 +639,10 @@ header .inner {padding: 20px 3%;}
 
 #design_exhib .modal .modal_content .modal_explain{
    display: flex;
-   /* flex-direction: column; */
    align-items: center; justify-content: center;
    gap: 3rem;
    color: var(--main-color);
    font-size: 2.8rem;
-   /* border: 1px solid red; */
    width: 100%; padding: 2rem 0 ;
 }
 
@@ -649,16 +654,6 @@ border-right: 1px solid var(--main-color);
 padding-right: 4rem;
 }
 
-
-
-#design_exhib .modal .modal_content .modal_explain .explain_title strong{
-   /* border: 1px solid var(--main-color);
-   border-radius: 2em;
-   padding: 2rem 3rem;
-   text-align: center;
-   width: 10rem; */
-
-}
 
 #design_exhib .modal .modal_content .modal_explain .explain_title p{
    font-size: 5rem; line-height: 5rem;
@@ -676,10 +671,6 @@ padding-right: 4rem;
    object-fit: cover;
 }
 
-
-/* #design_exhib .modal .modalImgBox .modal_explain .modalSpan{
-   display: none;
-} */
 
 /* footer */
 footer{
