@@ -50,8 +50,8 @@ let state = true
 
 
 
-$('.moreBox .total').text(total)
-$('.moreBox .show').text(current)
+$('.moreBox .show').text(total)
+$('.moreBox .total').text(current)
 
 $('.container_wrap .moreBox').on('click',function(e){
    e.preventDefault();
