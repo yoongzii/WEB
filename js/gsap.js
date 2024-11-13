@@ -24,7 +24,6 @@ main.to('.wrap_inner .txt_left', {
       animation: main,
       trigger: '#visual',
       start: `top top `,
-      // end: `+=${greetHeight / 6} top`,
       end:'+=4000px',
       pin: true,
       scrub: true,
