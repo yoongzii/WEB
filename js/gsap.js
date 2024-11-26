@@ -27,7 +27,7 @@ main.to('.wrap_inner .txt_left', {
       end:'+=5000px',
       pin: true,
       scrub: true,
-      markers: true,
+      markers: false,
    })
 
 
