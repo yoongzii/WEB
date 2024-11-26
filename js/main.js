@@ -41,9 +41,8 @@ $('button, a, .img_box img, .img_wrap img, .click_img').on('mouseover',function(
 
 //exhib_ container
 const total = $('.container .item').length;
-
 let count = 1;
-let current = 4
+let current = 4;
 let height = 450;
 let showTotal = '더보기';
 let state = true
@@ -83,15 +82,19 @@ $('.container_wrap .moreBox').on('click',function(e){
    $('.moreBox .openBox').text(showTotal)
 })
 
+const buttonAct = $('.designPro_pin .button-group button')
+
+buttonAct.on('click',function(){
+   buttonAct.removeClass("active");
+	$(this).addClass('active');
+})
 
 // init Isotope
-var $grid = $('.design_scroll ul').isotope({
+const $grid = $('.design_scroll ul').isotope({
  });
  $('.filter-button-group').on( 'click', 'button', function() {
    let filterValue = $(this).attr('data-filter');
    $grid.isotope({ filter: filterValue });
-   $('.filter-button-group button').removeClass('active')
-   $(this),addClass('active')
 
  });
 

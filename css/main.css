@@ -157,7 +157,7 @@ header .inner {padding: 20px 3%;}
    flex-direction: column; align-items: center;
    height: 150px;
    position: absolute; bottom: 5rem;
-   right: 5%; transform: translateX(-5%);
+   left: 5%; transform: translateX(-5%);
 }
 .visual_pin .scroll span{
    display: block;
@@ -188,7 +188,28 @@ header .inner {padding: 20px 3%;}
       height: 0%;
    }
 }
-
+@media screen and (max-width: 1540px) {
+   .greeting_wrap .wrap_inner .txt_wrap .trans{
+      font-size: 8rem; line-height: 8rem;
+   }
+   .greeting_wrap .wrap_inner .txt_wrap .txt_left{
+      padding-left: 8.5rem;
+   }
+   .greeting_wrap .wrap_inner .txt_wrap .txt_right{
+      padding-right: 1.5rem;
+   }
+ }
+@media screen and (max-width: 1440px) {
+   .greeting_wrap .wrap_inner .txt_wrap .trans{
+      font-size: 7rem; line-height: 7rem;
+   }
+   .greeting_wrap .wrap_inner .txt_wrap .txt_left{
+      padding-left: 6rem;
+   }
+   .greeting_wrap .wrap_inner .txt_wrap .txt_right{
+      padding-right: 3rem;
+   }
+ }
 /* about */
 #about{color: var(--main-color); height: 100vh;}
 
@@ -202,7 +223,7 @@ header .inner {padding: 20px 3%;}
    display: flex; flex-direction: column;
    align-items: center; justify-content: center;
    color: var(--main-color); gap: 7rem;
-   width: 50%; padding: 2.5rem;
+   width: 40%; padding: 2.5rem;
 }
 
 .pofile .photo{
@@ -231,11 +252,13 @@ header .inner {padding: 20px 3%;}
 .pofile_right{
    display: flex; flex-direction: column; gap: 3rem;
    justify-content: space-between; align-items: flex-start;
-   width: 50%;
+   width: 60%;
    padding: 0 10rem;
-   border-left: 1px solid var(--main-color);
+   /* border-left: 1px solid var(--main-color); */
    box-sizing: border-box;
 }
+
+
 
 .pofile_right strong {
    display: block; font-weight: bold;
@@ -251,18 +274,20 @@ header .inner {padding: 20px 3%;}
 }
 
 .pofile_right .pofile_list {
-   display: flex; align-items: flex-start;
-  justify-content: space-between;
+   display: flex; align-items: flex-start; gap: 3rem;
+   white-space: nowrap;
    width: 100%;
 }
-.pofile_right .pofile_list .history, .certificate{width: 50%;}
 .pofile_right .list_dayBox {display: flex; gap: 1rem; align-items: center;}
 .pofile_right .list_dayBox .list_day{font-size: 2rem; padding: 0.5rem 0;}
 .pofile_right .progrm_wrap {display: flex;flex-direction: column; gap: 2rem; white-space: nowrap;}
-.pofile_right .progrm_wrap img {width: 5rem; height: 5rem; padding-right: 4rem;}
+.pofile_right .progrm_wrap img {width: 5rem; height: 5rem; padding-right: 4rem;object-fit: cover;}
+@media screen and (max-width: 1540px) {
+.pofile_right .progrma_wrap img {width: 2.5rem; height: 2.5rem; }
+ }
 
 @media screen and (max-width: 1440px) {
-   .pofile_right{gap: 4rem;}
+   .pofile_right{gap: 2rem;}
    .pofile_right strong {font-size: 2.2rem;}
    .pofile_right .info_txt p{font-size: 2rem; line-height: 2.5rem;}
    .pofile_right .progrma_wrap img {width: 2.5rem; height: 2.5rem; }
@@ -361,10 +386,8 @@ header .inner {padding: 20px 3%;}
 #design_pro .designPro_pin .button-group button{
    font-size: 2rem;
    border: 1px solid inherit;
-   border-bottom: 2px solid var(--deepyellow-color);
-   /* border-bottom: none; */
 }
-
+/* #design_pro .designPro_pin .button-group button:nth-child(1){ border-bottom: 2px solid var(--deepyellow-color);} */
 #design_pro .designPro_pin .button-group button.active{
    border-bottom: 2px solid var(--deepyellow-color);
 }
@@ -422,7 +445,7 @@ header .inner {padding: 20px 3%;}
 }
 .design_scroll li .coding_box{
    position: relative;
-   filter: brightness(0.6);
+   filter: brightness(0.8);
 }
 
 
@@ -439,7 +462,6 @@ header .inner {padding: 20px 3%;}
    width: 100%;
    display: block;
    object-fit: cover;
-
 }
 
 .design_scroll li .img_box .coding_img{
@@ -476,15 +498,12 @@ header .inner {padding: 20px 3%;}
 }
 
 @media screen and (max-width: 1680px) {
-   .design_scroll .pro_txtBox .title_box .game{font-size: 2.5rem;}
    .design_scroll .pro_txtBox button a{width: 12rem;}
 }
 
 @media screen and (max-width: 1440px) {
-
-   .design_scroll .pro_txtBox .title_box strong{font-size: 3.2rem;}
-   .design_scroll .pro_txtBox .title_box .game{font-size: 2.4rem; line-height: 3.5rem;}
-   .design_scroll .pro_txtBox p{font-size: 1.6rem;}
+   .design_scroll .li_wrap .title_box strong{font-size: 3.2rem; line-height: 3.2rem;}
+   .design_scroll .li_wrap p{font-size: 1.6rem;}
 }
    /* design_exhib */
 #design_exhib{
