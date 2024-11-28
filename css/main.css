@@ -578,6 +578,9 @@ header .inner {padding: 20px 3%;}
 .container_wrap .container .item .img_zip img{
    width: 100%;
 }
+.container_wrap .container .item .img_zip img:not(:first-child) {
+   display: none;
+}
 
 .container_wrap .container .item .img_subText{
    display: flex; width: 100%; height: 100%;
@@ -684,8 +687,13 @@ padding-right: 4rem;
    font-size: 2.2rem;
 }
 
-
+#design_exhib .modal .modalImgBox{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
 #design_exhib .modal .modalImgBox .modalImg {
+   width: auto; max-width: 100%;
    margin: auto;
    object-fit: cover;
 }

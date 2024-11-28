@@ -39,6 +39,24 @@ $('button, a, .img_box img, .img_wrap img, .click_img').on('mouseover',function(
    })
 })
 
+
+// init Isotope
+const $grid = $('.design_scroll ul').isotope({
+ });
+ $('.filter-button-group').on( 'click', 'button', function() {
+   let filterValue = $(this).attr('data-filter');
+   $grid.isotope({ filter: filterValue });
+
+ });
+
+ const buttonAct = $('.designPro_pin .button-group button')
+
+ buttonAct.on('click',function(){
+    buttonAct.removeClass("active");
+    $(this).addClass('active');
+ })
+
+//degin project
 //exhib_ container
 const total = $('.container .item').length;
 let count = 1;
@@ -80,48 +98,31 @@ $('.container_wrap .moreBox').on('click',function(e){
    $('.moreBox .openBox').text(showTotal)
 })
 
-const buttonAct = $('.designPro_pin .button-group button')
 
-buttonAct.on('click',function(){
-   buttonAct.removeClass("active");
-	$(this).addClass('active');
-})
+$('.item').on('click', function() {
+   const imgSrcs = $(this).find('.img_zip img').map(function() {
+      return $(this).attr('src');
+   }).get();
 
-// init Isotope
-const $grid = $('.design_scroll ul').isotope({
- });
- $('.filter-button-group').on( 'click', 'button', function() {
-   let filterValue = $(this).attr('data-filter');
-   $grid.isotope({ filter: filterValue });
-
- });
-
-
- $('.item').on('click', function() {
-   const imgSrc = $(this).find('.img_zip img').attr('src');
    const subtextStrong = $(this).find('.modal_subText strong').text();
    const subtextP = $(this).find('.modal_subText p').text();
    const subtextSpan = $(this).find('.modal_subText span').text();
 
 
-    $('.modal').css('display', 'block');
+   let imgHtml = '';
+   imgSrcs.forEach(src => {
+      imgHtml += `<img class="modalImg" src="${src}">`;
+   });
+
+   $('.modalImgBox').html(imgHtml);
+   $('.modal_explain .explain_title strong').text(subtextStrong);
+   $('.modal_explain .explain_title p').text(subtextP);
+   $('.modal_explain span').text(subtextSpan);
+
+   $('.modal').css('display', 'block');
 });
 
-   $('.item').on('click', function() {
-      const imgSrc = $(this).find('.img_zip img').attr('src');
-      const subtextStrong = $(this).find('.modal_subText strong').text();
-      const subtextP = $(this).find('.modal_subText p').text();
-      const subtextSpan = $(this).find('.modal_subText span').text();
-      // const subtextSpan = $(this).find('.modalSpan').text();
 
-       $('.modalImg').attr('src', imgSrc);
-       $('.modal_explain .explain_title strong').text(subtextStrong);
-       $('.modal_explain .explain_title p').text(subtextP);
-       $('.modal_explain span').text(subtextSpan);
-
-       $('.modal').css('display', 'block');
-   });
-
-   $('.close').on('click', function() {
-       $('.modal').css('display', 'none');
-   });
+$('.close').on('click', function() {
+   $('.modal').css('display', 'none');
+});
