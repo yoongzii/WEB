@@ -116,7 +116,9 @@ header .inner {padding: 20px 3%;}
 
 .visual_pin .greeting_wrap .bg {transform: translateX(-4%);}
 .visual_pin .greeting_wrap .bg .wave_path_text{color: var(--main-color);}
-
+.visual_pin .greeting_wrap .bg svg{
+   width: 200rem; height: 100vh;
+}
 
 .greeting_wrap .wrap_inner .txt_wrap{
    display: flex; flex-direction: column; justify-content: center;
@@ -136,6 +138,7 @@ header .inner {padding: 20px 3%;}
    justify-content: center; align-items: center;
    font-size: 10rem; line-height: 10rem;
    text-align: center;
+   white-space: nowrap;
    color: var(--main-color);
 
 }
@@ -197,6 +200,7 @@ header .inner {padding: 20px 3%;}
    }
    .greeting_wrap .wrap_inner .txt_wrap .txt_right{
       padding-right: 1.5rem;
+
    }
  }
 @media screen and (max-width: 1440px) {
@@ -637,10 +641,10 @@ header .inner {padding: 20px 3%;}
 }
 
 #design_exhib .modal .modalBtn .close {
-   position: absolute;
-   top: 10px;
-   right: 15px;
-   color: white;
+   position: fixed;
+   top: 2%; right: 3%;
+   color: red; background: rgba(255, 255, 255, 0.4);
+   border-radius: 50%;
    font-size: 30px;
    font-weight: bold;
 }

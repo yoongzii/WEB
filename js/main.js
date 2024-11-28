@@ -45,12 +45,10 @@ let count = 1;
 let current = 4;
 let height = 450;
 let showTotal = '더보기';
-let state = true
+let state = true;
 
-
-
-$('.moreBox .show').text(total)
-$('.moreBox .total').text(current)
+$('.moreBox .show').text(current)
+$('.moreBox .total').text(total)
 
 $('.container_wrap .moreBox').on('click',function(e){
    e.preventDefault();
